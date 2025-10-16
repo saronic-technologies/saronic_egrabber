@@ -62,10 +62,11 @@
               src = egrabberPackage;
 
               installPhase = ''
-                mkdir -p $out/{lib,bin,firmware,studio,shell,scripts}
+                mkdir -p $out/{lib,include,bin,firmware,studio,shell,scripts}
 
                 # Copy libraries and CTI files
                 cp -r lib/* $out/lib/
+                cp -r include/* $out/include/
                 cp -r bin/* $out/bin/
                 cp -r firmware/stage2/euresys/eGrabber $out/firmware/
                 cp -r shell/* $out/shell/
